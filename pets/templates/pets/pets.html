@@ -39,7 +39,7 @@
                                             <p class="mb-0 text-left ">Category: {{ pet.category }}</p>
                                             <p class="mb-0 text-left ">Age: {{ pet.age }}</p>
                                            <p class="mb-0 text-left ">Gender: {{ pet.gender }}</p>
-                                           <a href=" {% url , pet.id}"> Description </a>
+                                           <a href="{% url 'pet_desc' name=pet.name %}"> Description </a>
                                         </div>
                                 </div>
                             </div>

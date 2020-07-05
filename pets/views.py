@@ -14,10 +14,10 @@ def pets(request):
     return render(request, 'pets/pets.html', context)
 
 
-def pet_desc(request, pet_id):
+def pet_desc(request, name):
 
     """This view return pet description"""
-    pet = get.object_or_404(Pet, pk=pet_id)
+    pet = Pet.objects.get(name=name)
     context = {
         'pet' : pet,
     }
