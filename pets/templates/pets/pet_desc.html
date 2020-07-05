@@ -7,11 +7,30 @@
 
 {% block content%}
 <div class="overlay"></div>
- <div class="container-fluid">
-        <div class="row">
-        <h1>{{ pet.name}}</h1>
+ <div class="container">
+        <div class="row mt-3">
+            <div class="col text-center"> <h1>{{ pet.name }}</h1>
+            <hr class="w-50 mb-1">
         </div>
- </div>
-  
+            </div>
+            
+        <div class="row mt-5">
+            <div class="col-md-2 col-sm-12"><strong>Category:</strong> {{ pet.category }}</div>
+            <div class="col-md-2 col-sm-12"><strong>Gender:</strong> {{ pet.gender }}</div>
+            <div class="col-md-2 col-sm-12"><strong>Gender:</strong> {{ pet.age }}</div>
+        </div>
+        <div class="row">
+            <div class="col mt-5">
+            <p>{{ pet.description }} </p>
+        </div>
+        <div class="row">
+            <div class="col mt-5">
+            <a href="#">
+           <img class="card-img-top img-fluid" src="{{ pet.image.url }}" alt="{{ pet.name }}">
+            </a>
+            </div>
+        </div>
 
+
+ </div>
 {% endblock %}
