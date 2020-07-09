@@ -13,11 +13,15 @@ def donation(request):
 
 
 def charge(request):
-	amount = 5
-	if request.method == 'POST':
-		print('Data:', request.POST)
+    amount = 5
+    if request.method == 'POST':
+        print('Data:', request.POST)
+        stripe.Customer.create(
+            email=request.POST['email'],
+            name=request.POST['nickname']
+        )
 
-	return redirect(reverse('success', args=[amount]))
+    return redirect(reverse('success', args=[amount]))
 
 
 def successMsg(request, args):
