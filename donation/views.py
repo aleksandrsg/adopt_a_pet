@@ -4,7 +4,7 @@ from django.http import JsonResponse
 
 import stripe
 
-stripe.api_key="pk_test_51GzQgqCXlb7SRfOrsuiwGPZ6GUP1S2reXQvjNW6vwuPc2jTGsfC1zPVRCPTKOhNkIP7LQxqjjDc6yCno7KIGESIJ00hgKblPeN"
+stripe.api_key="sk_test_51GzQgqCXlb7SRfOrHopPuVmW8OjuVHBg9lHTHLs7wvIE1YNlvhH3YRCixIL6k0m6FizCxd0HoikGx6XD1kbyl5Ml00pLUSwAoL"
 
 # Create your views here.
 
@@ -16,11 +16,18 @@ def charge(request):
     amount = 5
     if request.method == 'POST':
         print('Data:', request.POST)
-        stripe.Customer.create(
+        customer = stripe.Customer.create(
             email=request.POST['email'],
-            name=request.POST['nickname']
+            name=request.POST['nickname'],
+            source=request.POST['stripeToken']
         )
 
+        charge = stripe.Charge.create(
+            customer = customer,
+            amount = 500,
+            currency ='eur',
+            description = "Donation"
+        )
     return redirect(reverse('success', args=[amount]))
 
 
