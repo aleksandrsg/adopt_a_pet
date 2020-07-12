@@ -12,6 +12,7 @@
 <body>
 <div class="overlay"></div>
 <div class="form-style">
+<h1>Here you make a donation</h1>
 <form action="{% url 'charge' %}" method="post" id="payment-form">
   <div class="form-row">
     {% csrf_token %}
