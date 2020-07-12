@@ -13,41 +13,22 @@
             <h2 class="logo-font">Pets</h2>
             <hr class="w-50 mb-1">
             </div>
-        </div>
+        </div>        
         <div class="row">
-             <div class="product-container col-10 offset-1">
-                <div class="row mt-1 mb-2"></div>
-                <div class="row">
-                    {%for pet in pets%}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-                            <div class="card h-100 border-0">
-                                {% if pet.image %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ pet.image.url }}" alt="{{ pet.name }}">
-                                </a>
-                                {% else %}
-                                <a href="">
-                                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ pet.name }}">
-                                </a>
-                                {% endif %}
-                                <div class="card-body pb-0">
-                                    <p class=" lead mb-0 font-weight-bold">Nick name: {{ pet.name }}</p>
-                                </div>
-                                <div class="card-footer bg-white pt-0 border-0 text-left">
-                                    <div class="row">
-                                        <div class="col">
-                                            <p class="mb-0 text-left ">Category: {{ pet.category }}</p>
-                                            <p class="mb-0 text-left ">Age: {{ pet.age }}</p>
-                                           <p class="mb-0 text-left ">Gender: {{ pet.gender }}</p>
-                                           <a href="{% url 'pet_desc' name=pet.name %}"> Description </a>
-                                        </div>
-                                </div>
-                            </div>
-                        </div>
-                    {%endfor%}
+            {%for pet in pets%}
+            <div class="col-md-4">
+                <div class="card">
+                    <img class="card-img-top" src="{{ pet.image.url }}" alt="Card image">
+                    <div class="card-body">
+                        <h4 class="card-title">{{ pet.name}}</h4>
+                        <p class="card-text">Category: {{ pet.category }}</p>
+                        <p class="card-text">Age: {{ pet.age }}</p>
+                        <p class="card-text">Gender:{{ pet.gender }}</p>
+                        <a href="{% url 'pet_desc' name=pet.name %}" class="btn btn-primary"> Description </a>
+                    </div>
                 </div>
-             </div>
-        </div>
+            </div>    
+            {%endfor%}
+        </div>             
 </div>
-
 {% endblock %}
