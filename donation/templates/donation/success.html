@@ -8,12 +8,13 @@
 
 {% block content%}
 <div class="overlay"></div>
-<div id="box">
-		<img id="succes-icon" src="#">
-		<h4>Thank you for your contribution of ${{amount}}!</h4>
+<div class="container">
+    <div id="box" style="text-align:center">
+		<img id="succes-icon" src="/media/tenor.gif">
+		<h2>Thank you for your contribution of EUR{{amount}}!</h2>
 		<p>Your support helps us</p>
 		<hr>
-		<a class="myButton" href="#">Back to donation page</a>
+		<a class="myButton" href="{% url 'donation' %}">Back to donation page</a>
 	</div>
-
+</div>
 {% endblock %}
