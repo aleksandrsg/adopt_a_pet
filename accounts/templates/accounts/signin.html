@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <div class="overlay"></div>
+    <h1>Sing in </h1>
+   <form class="" action="/accounts/signin" method="POST">
+   {% csrf_token %}
+   {{ form }}
+   <input type="submit" value="Sign in">
+   </form>
+</div>
+
+{% endblock %}
