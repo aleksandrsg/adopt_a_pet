@@ -65,6 +65,12 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{% url 'signup' %}">Sing up</a>
           <a class="dropdown-item" href="{% url 'signin' %}">Sing in</a>
+          <a class="dropdown-item" href="#">
+           <form class="" action="/accounts/logout" method="POST">
+                {% csrf_token %}
+            <button type="submit">Logout</button>
+            </form>
+          </a>
         </div>
       </li>
     </ul>
