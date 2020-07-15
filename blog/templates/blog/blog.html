@@ -4,6 +4,13 @@
 <div class="overlay"></div>
 <div class="container-fluid">
 <h1>Happy comments</h1>
-{{ comments }}
+    {% for comment in comments %}
+        <div class="comment">
+            <h1> {{ comment.title}}</h1>
+            <p> {{ comment.date}}</p>
+            <p> {{ comment.body}}</p>
+        </div>
+    {%endfor%}
 </div>
+
 {% endblock %}
