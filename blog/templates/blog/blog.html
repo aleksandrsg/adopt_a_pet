@@ -3,13 +3,14 @@
 {% block content%}
 <div class="overlay"></div>
 <div class="container-fluid">
-<h1>Happy comments</h1>
+<h1>Please leave your comments here</h1>
     {% for comment in comments %}
-        <div class="comment">
-            <h1> {{ comment.title}}</h1>
+        <div class="mt-5 col-md-8">
+            <h3 style="font-color:black"> {{ comment.title}}</h3>
             <p> {{ comment.date}}</p>
-            <p> {{ comment.body}}</p>
+            <p style="font-style:italic"> {{ comment.body}} "</p>
         </div>
+         <hr class="w-50 mb-1">
     {%endfor%}
 </div>
 
