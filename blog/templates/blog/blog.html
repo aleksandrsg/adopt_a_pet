@@ -7,8 +7,9 @@
     {% for comment in comments %}
         <div class="mt-5 col-md-8">
             <h3 style="font-color:black"> {{ comment.title}}</h3>
+            <p> Author: {{ comment.author}}</p>
             <p> {{ comment.date}}</p>
-            <p style="font-style:italic"> {{ comment.body}} "</p>
+            <p style="font-style:italic">" {{ comment.body}} "</p>
         </div>
          <hr class="w-50 mb-1">
     {%endfor%}

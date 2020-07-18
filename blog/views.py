@@ -18,6 +18,9 @@ def new_comment(request):
     if request.method == 'POST':
         form = forms.CreateComment(request.POST)
         if form.is_valid():
+            addition = form.save(commit=False)
+            addition.author = request.user
+            addition.save()
             return redirect('home')
     else:
         form = forms.CreateComment()
@@ -25,4 +28,3 @@ def new_comment(request):
             'form':form
         }
     return render(request, 'blog/new_comment.html', context)
-
