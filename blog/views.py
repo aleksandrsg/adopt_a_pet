@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Comment
 from django.contrib.auth.decorators import login_required
-
+from . import forms 
 
 
 # Create your views here.
@@ -15,5 +15,14 @@ def comments(request):
 
 @login_required(login_url="/accounts/signin")
 def new_comment(request):
+    if request.method == 'POST':
+        form = forms.CreateComment(request.POST)
+        if form.is_valid():
+            return redirect('home')
+    else:
+        form = forms.CreateComment()
+        context = {
+            'form':form
+        }
+    return render(request, 'blog/new_comment.html', context)
 
-    return render(request, 'blog/new_comment.html')

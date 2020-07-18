@@ -2,6 +2,13 @@
 
 {% block content%}
 <div class="overlay"></div>
+<div>
 <h1> Please create a new comment here </h1>
+<form class="" action="{% url 'new_comment' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+<input type="submit" value="Leave a comment">
+</form>
+</div>
 
 {% endblock %}
