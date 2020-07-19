@@ -26,7 +26,7 @@ SECRET_KEY = '5j-n4m=@$s&9#)ojahe9@#s(v-q0)7ff9&&ep!8rm+i^#d&i@)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['adopt-a-pet-1.herokuapp.com/']
 
 
 # Application definition
