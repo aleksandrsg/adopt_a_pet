@@ -1,0 +1,1 @@
+web: gunicorn adopt_a_pet.wsgi:application
