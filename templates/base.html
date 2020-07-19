@@ -58,8 +58,16 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'donation' %}">Donation</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'comments' %}">Blog</a>
+      <li class="nav-item dropdown">
+       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Blog
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'comments' %}">Comments</a>
+          <a class="dropdown-item" href="{% url 'new_comment' %}">New comment</a>
+          
+        </div>
+      </li>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
