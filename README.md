@@ -4,4 +4,6 @@ Welcome aleksandrsg,
 
 ### Final Milestone Project with Django Framework
 
+Deployed on [Heroku] (https://adopt-a-pet-1.herokuapp.com)
+
 Happy coding!
