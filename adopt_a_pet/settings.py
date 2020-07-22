@@ -87,17 +87,17 @@ WSGI_APPLICATION = 'adopt_a_pet.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-if development:
-    DATABASES = {
-    'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
+#if development:
+#    DATABASES = {
+#    'default': {
+#            'ENGINE': 'django.db.backends.sqlite3',
+#            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#        }
+#    }
+#else:
+DATABASES = {
+    'default': dj_database_url.parse('postgres://aocckdyaeqwtmy:1b0a21847b195f9627850c9f0f9609a4281001bb72fe407df690de20b3bd8815@ec2-54-246-87-132.eu-west-1.compute.amazonaws.com:5432/d4kojmhdfv5lg8')
     }
-else:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-        }
 
 
 # Password validation
