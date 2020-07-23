@@ -20,15 +20,17 @@
             <div class="col-md-2 col-sm-12"><strong>Gender:</strong> {{ pet.age }}</div>
         </div>
         <div class="row">
-            <div class="col mt-5">
+            <div class="col-12 mt-5">
             <p>{{ pet.description }} </p>
         </div>
         <div class="row">
-            <div class="col mt-5">
-            <a href="#">
-           <img class="card-img-top img-fluid" src="{{ pet.image.url }}" alt="{{ pet.name }}">
-            </a>
+            <div class="col border-1 border-dark">
+            <img class="col-md-10" src="{{ pet.image_url }}" alt="{{ pet.name }}">
             </div>
+        </div>
+        <div class="col-12">
+        <a href="{%url 'pets' %}"> Back to Pets list</a>
+        </div>
         </div>
 
 
