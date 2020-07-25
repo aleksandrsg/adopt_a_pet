@@ -79,6 +79,10 @@ post code 12345
 Submit the form and redirected to success Donation Page.
 <img src= "media/stripe_form.png">
 
+Stripe confirmation:
+
+<img src= "media/stripe.png">
+
 ## Deployment
 ---
 This Project was created and developed in GitPod IDE and
