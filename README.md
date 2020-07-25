@@ -9,6 +9,7 @@ Web Project Adopt a Pet developed on Django framework together with other web la
 like Stripe (e-commerce functionality implementation), Bootstrap (responsive design) ect.  
 Frameworks like Django or Flask helped me to see clear full picture of web development process   
 from front-end till back-end development.  
+Project consists of five apps: Home, Pets, Donation, Blog and Accounts.
 
 ## UX  
 ---
@@ -50,6 +51,33 @@ Development and hosting tools:
 - GitHub,
 - Heroku,
 - Postres DB ad-on.
+
+## Testing
+---
+The project was created, developed and tested in GitPod IDE step by step manualy. 
+
+Testing protocol:
+1. Open Home Page and test Logo link, test all navigation links, test all buttons and elements position.
+2. Open Our Pets Page and inspect Pets card position, card description, card button.
+3. Click on Pet card button (Description) and redirected to full description page.
+4. Inspect and check all elements and link on Pet Description Page.
+5. Open Donation Page, complete the Donation Form and submit Form. Test link return to Home Page.
+6. Open Blog submenu Comments, inspect comments position and all comments elements (title, author, date, description).
+7. Open Blog submenu New_Comment, Sign in and complete the Comment Form, if not authorized go to  
+Registration Page and complete Sign Up form. Go back to Page New_Comment, complete and submit  
+New_Comment Form, test Logout button. 
+8. Deployment to Heroku.
+
+### Testing Stripe API:
+
+Open the Donation Page, complete the Form.  
+In field Credit or Debit Card type testing data  
+card number: 4242 4242 4242 4242  
+card expared date 09/20  
+cvc 123  
+post code 12345  
+Submit the form and redirected to success Donation Page.
+<img src= "media/stripe_form.png">
 
 ## Deployment
 ---
