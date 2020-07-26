@@ -140,3 +140,29 @@ body {
 .form-style input[type="button"]:hover{
 	background: #2EBC99;
 }
+
+/* Styling Sign in and Sign up Forms */
+
+form input, form textarea{
+    display: block;
+    margin: 20px 0 0 0;
+    padding: 5px;
+}
+
+.errorlist li {
+    padding: 10px;
+    list-style-type:none;
+    border: 1px solid #f44336;
+    color: #f44336;
+    margin: 10px 0;
+}
+
+.errorlist{
+    padding: 0;
+}
+
+/* Pets Page */
+
+.btn-green{
+    background:#43D1AF;
+}

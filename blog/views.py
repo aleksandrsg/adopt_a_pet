@@ -21,7 +21,7 @@ def new_comment(request):
             addition = form.save(commit=False)
             addition.author = request.user
             addition.save()
-            return redirect('home')
+            return redirect('comments')
     else:
         form = forms.CreateComment()
         context = {
