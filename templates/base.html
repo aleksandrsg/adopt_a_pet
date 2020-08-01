@@ -1,10 +1,8 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-
-
 
     {% block meta%}
     <!-- Required meta tags -->
@@ -14,7 +12,6 @@
     <meta name="keywords" content="Pets, adoptation, adopt a pet, adopt a cat, adopt a dog">
     <meta name="description" content="Cats and Dogs Waiting For a New Homes">
     <meta name="author" content="Aleksandrs G">
-    <meta http-equiv="refresh" content="30">
 
     {% endblock %}
 
@@ -49,7 +46,7 @@
   </head>
   <body>
   <header>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
   <a class="navbar-brand" href="{% url 'home' %}">Adopt a Pet</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
