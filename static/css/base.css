@@ -145,8 +145,8 @@ body {
 
 form input, form textarea{
     display: block;
-    margin: 20px 0 0 0;
-    padding: 5px;
+    margin: 0 0 20px 0;
+    padding: 0px;
 }
 
 .errorlist li {
@@ -168,3 +168,18 @@ form input, form textarea{
 }
 
 /* Paginator */
+
+.pagination-action {
+    margin:5px;
+    display: inline-block;
+    font-size: 30px;
+    color: silver;
+}
+.pagination-action:hover {
+    color: black;
+}
+.pagination-number {
+    font-size: 25px;
+    padding: 1px 4px;
+    margin: 3px;
+}

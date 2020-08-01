@@ -14,25 +14,25 @@
             <hr class="w-50 mb-1">
             </div>
         </div>    
-        <div class="row justify-content-center">
-    <div class="col-1">
+        <div class="row">
+    <div class="col">
     
         {% if pets.has_previous %}
-            <a href="?page=1"> <i class="fas fa-angle-double-left"></i> </a>
-            <a href="?page= {{pets.previous_page_number}}"> <i class="fas fa-angle-left"></i> </a>
+            <a class="pagination-action" href="?page=1"> <i class="fas fa-angle-double-left"></i> </a>
+            <a class="pagination-action" href="?page= {{pets.previous_page_number}}"> <i class="fas fa-angle-left"></i> </a>
         {% endif %}
 
         {% for num in pets.paginator.page_range %}
             {% if pets.number == num %}
-             <strong> {{ num }} </strong>
+             <span class="pagination-number"><strong> {{ num }} </strong> </span>
             {% else%}
-              {{ num }} </span>
+              <span class="pagination-number">{{ num }} </span>
             {% endif %}
         {% endfor %}
 
         {% if pets.has_next %}
-            <a href="?page= {{pets.next_page_number}}"><i class="fas fa-angle-right"></i></i></a>
-            <a href="?page= {{pets.paginator.num_pages}}"><i class="fas fa-angle-double-right"></i></i></a>
+            <a class="pagination-action" href="?page= {{pets.next_page_number}}"><i class="fas fa-angle-right"></i></i></a>
+            <a class="pagination-action" href="?page= {{pets.paginator.num_pages}}"><i class="fas fa-angle-double-right"></i></i></a>
         {% endif %}
 
     </div>
