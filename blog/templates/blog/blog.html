@@ -4,6 +4,27 @@
 <div class="overlay"></div>
 <div class="container-fluid">
 <h1>Please leave your comments here</h1>
+<div class="Paginator">
+  
+    {% if comments.has_previous %}
+        <a href="?page=1"> << </a>
+        <a href="?page= {{comments.previous_page_number}}"> < </a>
+    {% endif %}
+
+    {% for num in comments.paginator.page_range %}
+        {% if comments.number == num %}
+         <strong> {{ num }} </strong>
+        {% else%}
+            {{ num }}
+        {% endif %}
+    {% endfor %}
+
+      {% if comments.has_next %}
+        <a href="?page= {{comments.next_page_number}}"> > </a>
+        <a href="?page= {{comments.paginator.num_pages}}"> >> </a>
+    {% endif %}
+
+</div>
     {% for comment in comments %}
         <div class="mt-5 col-md-8">
             <h3 style="font-color:black"> {{ comment.title}}</h3>

@@ -2,12 +2,17 @@ from django.shortcuts import render, redirect
 from .models import Comment
 from django.contrib.auth.decorators import login_required
 from . import forms 
+from django.core.paginator import Paginator
 
 
 # Create your views here.
 
 def comments(request):
     comments = Comment.objects.all()
+    paginator = Paginator(comments, 2)
+    page = request.GET.get('page')
+    comments = paginator.get_page(page)
+
     context={
         'comments':comments
     }

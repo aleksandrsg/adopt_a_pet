@@ -52,8 +52,16 @@
       <li class="nav-item active">
         <a class="nav-link" href=" {% url 'home' %}">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'pets' %}">Our Pets</a>
+       <li class="nav-item dropdown">
+       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Our Pets
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="dropdown-item" href="{% url 'pets' %}">All Pets</a>
+          <a class="dropdown-item" href="{% url 'pets' %}?category=dogs" >Dogs</a>
+          <a class="dropdown-item" href="{% url 'pets' %}?category=cats">Cats</a>
+          <a class="dropdown-item" href="{% url 'pets' %}?category=other">Other</a>
+        </div>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'donation' %}">Donation</a>
@@ -65,9 +73,7 @@
         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="{% url 'comments' %}">Comments</a>
           <a class="dropdown-item" href="{% url 'new_comment' %}">New comment</a>
-          
         </div>
-      </li>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
