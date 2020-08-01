@@ -4,26 +4,28 @@
 <div class="overlay"></div>
 <div class="container-fluid">
 <h1>Please leave your comments here</h1>
-<div class="Paginator">
-  
-    {% if comments.has_previous %}
-        <a href="?page=1"> << </a>
-        <a href="?page= {{comments.previous_page_number}}"> < </a>
-    {% endif %}
-
-    {% for num in comments.paginator.page_range %}
-        {% if comments.number == num %}
-         <strong> {{ num }} </strong>
-        {% else%}
-            {{ num }}
+<div class="row justify-content-center">
+    <div class="col-1">
+    
+        {% if comments.has_previous %}
+            <a href="?page=1"> <i class="fas fa-angle-double-left"></i> </a>
+            <a href="?page= {{comments.previous_page_number}}"> <i class="fas fa-angle-left"></i> </a>
         {% endif %}
-    {% endfor %}
 
-      {% if comments.has_next %}
-        <a href="?page= {{comments.next_page_number}}"> > </a>
-        <a href="?page= {{comments.paginator.num_pages}}"> >> </a>
-    {% endif %}
+        {% for num in comments.paginator.page_range %}
+            {% if comments.number == num %}
+            <span class="pagination-number">  <strong> {{ num }} </strong> </span>
+            {% else%}
+                <span class="pagination-number"> {{ num }} </span>
+            {% endif %}
+        {% endfor %}
 
+        {% if comments.has_next %}
+            <a href="?page= {{comments.next_page_number}}"><i class="fas fa-angle-right"></i></i></a>
+            <a href="?page= {{comments.paginator.num_pages}}"><i class="fas fa-angle-double-right"></i></i></a>
+        {% endif %}
+
+    </div>
 </div>
     {% for comment in comments %}
         <div class="mt-5 col-md-8">
