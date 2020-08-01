@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Pet, Category
+from django.core.paginator import Paginator
 
 # Create your views here.
 
@@ -8,6 +9,10 @@ def pets(request):
     """This view return page this all pets on it"""
     pets = Pet.objects.all()
     categories = None
+
+    paginator = Paginator(pets, 3)
+    page = request.GET.get('page')
+    pets = paginator.get_page(page)
 
     if request.GET:
         if 'category' in request.GET:
