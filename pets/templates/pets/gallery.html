@@ -1,0 +1,44 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block page_header %}
+  
+{% endblock %}
+
+{% block content%}
+<div class="container">
+        <div class="overlay"></div>
+        <div class="row">
+            <div class="col">
+               <img name="slide" width="100%" height="auto">
+            </div>
+        </div>
+</div>
+
+<script>
+
+var i =0;
+var images = [];
+var time = 3000;
+
+images[0] ='/static/media/cat.jpg';
+images[1] ='/static/media/dog.jpg';
+images[2] ='/static/media/cat.jpg';
+images[3] ='/static/media/background2.jpg';
+
+function changeImg(){
+    document.slide.src=images[i];
+
+    if (i < images.length-1){
+        i++;
+    } else{
+        i=0;
+    }
+
+    setTimeout("changeImg()", time);
+}
+
+window.onload = changeImg;
+</script>
+
+{% endblock %}

@@ -37,3 +37,7 @@ def pet_desc(request, name):
     }
 
     return render(request, 'pets/pet_desc.html', context)
+
+def gallery(request):
+
+    return render(request, 'pets/gallery.html')
