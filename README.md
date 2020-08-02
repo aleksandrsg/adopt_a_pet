@@ -109,3 +109,5 @@ Heroku repository: https://adopt-a-pet-1.herokuapp.com/
 ## Tehnical Reference
 ---
 https://www.w3schools.com/
+
+https://pixabay.com/images

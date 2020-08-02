@@ -6,11 +6,18 @@
 {% endblock %}
 
 {% block content%}
-<div class="container">
-        <div class="overlay"></div>
+<div class="overlay"></div>
+<div class="container"> 
         <div class="row">
             <div class="col">
-               <img name="slide" width="100%" height="auto">
+                <h1 style="margin-top:100px; text-align:center"> - Gallery - </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="slider">
+                    <img name="slide" id="img" alt ="Automated Pets Gallery">
+               </div>
             </div>
         </div>
 </div>
@@ -22,9 +29,10 @@ var images = [];
 var time = 3000;
 
 images[0] ='/static/media/cat.jpg';
-images[1] ='/static/media/dog.jpg';
-images[2] ='/static/media/cat.jpg';
+images[1] ='/static/media/dog1.jpg';
+images[2] ='/static/media/cat2.jpg';
 images[3] ='/static/media/background2.jpg';
+images[4] ='/static/media/cat3.jpg';
 
 function changeImg(){
     document.slide.src=images[i];

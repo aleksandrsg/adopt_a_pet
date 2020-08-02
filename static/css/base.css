@@ -190,3 +190,27 @@ form input, form textarea{
     position:fixed;
     width:100%
     }
+
+
+/* Gallery */
+
+.slider {
+    width: 90%;
+    height: auto;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 10px grey;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+#img {
+    width: 100%;
+    height: 100%;
+    animation: example 20s infinite;
+}
+
+@keyframes example {
+  0%   {transform: scale(1.2)}  
+  50%  {transform: scale(1.1)}
+  100%  {transform: scale(1)}
+}
