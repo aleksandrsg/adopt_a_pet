@@ -2,7 +2,7 @@
 
 {% block content%}
 <div class="overlay"></div>
-<div class="container-fluid">
+<div class="container-fluid margin-top">
 <h1> Please create a new comment here </h1>
 <form class="" action="{% url 'new_comment' %}" method="post">
     {% csrf_token %}
